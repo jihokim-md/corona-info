@@ -650,7 +650,7 @@ h5{font-size:16px; line-height:22px}
 }
 
 .is-not-ios .page-content{
-    padding-bottom:60px;
+    padding-bottom:0px;
 }
 
 .is-ios .page-content{
