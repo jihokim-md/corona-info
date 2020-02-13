@@ -1,7 +1,0 @@
-# NodeJS
-node_modules/
-
-# WebStorm
-out/
-.idea/
-*.iml
