@@ -1,0 +1,20 @@
+{
+	"kr_inf": "28",
+	"kr_inf_diff": "(-)",
+	"kr_inf_name": "\uac10\uc5fc\uc790(\ud655\uc9c4)",
+	"kr_death": "0",
+	"kr_death_diff": "(-)",
+	"kr_death_name": "\uc0ac\ub9dd\uc790",
+	"kr_cured": "7",
+	"kr_cured_diff": "(-)",
+	"kr_cured_name": "\uc644\uce58",
+	"kr_candidate": "6,826",
+	"kr_candidate_diff": "(+343)",
+	"kr_candidate_name": "\uc758\uc2ec\ud658\uc790*",
+	"kr_test": "692",
+	"kr_test_diff": "(+130)",
+	"kr_test_name": "\uac80\uc0ac\uc911",
+	"kr_negative": "6,134",
+	"kr_negative_diff": "(+213)",
+	"kr_negative_name": "\uacb0\uacfc\uc74c\uc131"
+}
