@@ -1,16 +1,17 @@
 {
-	"wo_inf": "64,342",
-	"wo_inf_diff": "(+3,935)",
+	"wo_inf": "64,442",
+	"wo_inf_diff": "(+4,035)",
 	"wo_inf_name": "\uac10\uc5fc\uc790(\ud655\uc9c4)",
-	"wo_death": "1,490",
-	"wo_death_diff": "(+120)",
+	"wo_death": "1,383",
+	"wo_death_diff": "(+13)",
 	"wo_death_name": "\uc0ac\ub9dd\uc790",
-	"wo_cured": "7,018",
-	"wo_cured_diff": "(+736)",
+	"wo_cured": "6,887",
+	"wo_cured_diff": "(+605)",
 	"wo_cured_name": "\uc644\uce58",
-	"wo_death_rate": "2.32%",
+	"wo_death_rate": "2.15%",
 	"wo_death_rate_name": "\uce58\uc0ac\uc728",
 	"wo_country_test": "29",
 	"wo_country_diff": "(-)",
-	"wo_country_name": "\ubc1c\uc0dd\uad6d"
+	"wo_country_name": "\ubc1c\uc0dd\uad6d",
+	"update_time": "\ub9c8\uc9c0\ub9c9 \uc5c5\ub370\uc774\ud2b8: 2020. 2. 14. \uc624\ud6c4 2:06"
 }

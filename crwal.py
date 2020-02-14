@@ -10,6 +10,8 @@ driver.get('https://wuhanvirus.kr')
 html = driver.page_source
 soup = BeautifulSoup(html, 'html.parser')
 time.sleep(1)
+update_time = driver.find_element_by_id('last-updated')
+time.sleep(1)
 wo_list = driver.find_element_by_class_name('row.dashboard.world')
 time.sleep(1)
 wo_value = wo_list.text.split('\n')
@@ -28,6 +30,7 @@ wo_key = ['wo_inf',
           'wo_country_diff',
           'wo_country_name']
 wo_dic = { name:value for name, value in zip(wo_key, wo_value) }
+wo_dic['update_time'] = update_time.text
 
 kr_list = driver.find_element_by_class_name('row.dashboard.korea')
 time.sleep(1)
@@ -51,6 +54,7 @@ kr_key = ['kr_inf',
           'kr_negative_diff',
           'kr_negative_name']
 kr_dic = { name:value for name, value in zip(kr_key, kr_value) }
+kr_dic['update_time'] = update_time.text
 
 with open('kr_data.json', 'w', encoding='utf-8') as make_file:
     json.dump(kr_dic, make_file, indent="\t")
