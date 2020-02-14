@@ -19,7 +19,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
     <meta name="keywords" content="코로나, 코로나 바이러스, 현황, 코로나 현황, 코로나 정보, 코로나 지도, 코로나 맵, 코로나 뉴스">
-    <title>코로나 인포</title>
+    <title>코로나 인포 2.0</title>
     <meta name="description" content="국내외 신종 코로나 바이러스에 대한 정보들을 한눈에 확인하세요.">
     <meta property="og:type" content="website">
     <meta property="og:title" content="코로나 인포">
@@ -44,14 +44,15 @@
     </div>
 
     <div class="header header-fixed header-logo-left shadow-large">
-        <em><a href="index.html" class="header-title"><span class="color-highlight">CORONA</span> INFO</a></em>
+        <em><a href="index.html" class="header-title"><span class="color-highlight">CORONA</span> INFO 2.0</a></em>
     </div>
 
     <div class="page-content header-clear-small top-50">
         <div class="content bottom-10">
             <h2 class="bolder">COVID-19 실시간 현황</h2>
                     <a class="font-10 color-highlight" href="JavaScript:window.location.reload()">
-                        <p class="under-heading font-12 color-highlight bottom-0" id = "update_time">
+                        <p class="under-heading font-12 color-highlight bottom-0" id="update_time">
+                            업데이트: 2020. 2. 14. 오후 2:06
                             <i class="fas fa-sync-alt fa-spin fa-fw" style="animation-duration: 2.8s;"></i>
                         </p>
                     </a>
@@ -72,13 +73,13 @@
                         </p>
                     </div>
                     <div class="one-third">
-                        <h5 class="bolder center-text color-red2-dark">0</h5>
+                        <h5 class="bolder center-text color-red2-dark" id="kr_death"></h5>
                         <p class="center-text font-11 bottom-0 font-medium">
                             사망
                         </p>
                     </div>
                     <div class="one-third last-column">
-                        <h5 class="bolder center-text color-green2-dark">7</h5>
+                        <h5 class="bolder center-text color-green2-dark" id="kr_cured">7</h5>
                         <p class="center-text font-11 bottom-0 font-medium">
                             완치
                         </p>
@@ -86,18 +87,18 @@
                   </div>
                   <div class="one-half">
                     <div class="one-third">
-                        <h5 class="bolder center-text">6,826</h5>
+                        <h5 class="bolder center-text" id="kr_candidate">6,826</h5>
                         <p class="center-text font-11 bottom-0 font-medium">
                             의사환자
                         </p>
                     </div>
                     <div class="one-third">
-                        <h5 class="bolder center-text">692</h5>
+                        <h5 class="bolder center-text" id="kr_test">692</h5>
                         <p class="center-text font-11 bottom-0 font-medium">
                             검사 중
                         </p>
                     </div>
-                    <div class="one-third last-column">
+                    <div class="one-third last-column" id="kr_negative">
                         <h5 class="bolder center-text">6,134</h5>
                         <p class="center-text font-11 bottom-0 font-medium">
                             검사 음성
@@ -112,30 +113,30 @@
                 </span>
                 <div class="content bg-white shadow-huge" style="padding-top: 10px; margin:5px 0 0 -15px; height:63px">
                     <div class="one-fifth">
-                        <h5 class="bolder center-text">64,342</h5>
+                        <h5 class="bolder center-text" id="wo_inf">64,342</h5>
                         <p class="center-text font-11 bottom-0 font-medium">
                             확진
                         </p>
                     </div>
                     <div class="one-fifth">
-                        <h5 class="bolder center-text color-red2-dark">1,490</h5>
+                        <h5 class="bolder center-text color-red2-dark" id="wo_death">1,490</h5>
                         <p class="center-text font-11 bottom-0 font-medium">
                             사망
                         </p>
                     </div>
                     <div class="one-fifth">
-                        <h5 class="bolder center-text color-green2-dark">7,018</h5>
+                        <h5 class="bolder center-text color-green2-dark" id="wo_cured">7,018</h5>
                         <p class="center-text font-11 bottom-0 font-medium">
                             완치
                         </p>
                     </div>
                     <div class="one-fifth">
-                        <h5 class="bolder center-text">2.32%</h5>
+                        <h5 class="bolder center-text" id="wo_death_rate">2.32%</h5>
                         <p class="center-text font-11 bottom-0 font-medium">
                             치사율
                         </p>
                     </div>
-                    <div class="one-fifth last-column">
+                    <div class="one-fifth last-column" id="wo_country_test">
                         <h5 class="bolder center-text">29</h5>
                         <p class="center-text font-11 bottom-0 font-medium">
                             발생 국가
@@ -210,7 +211,7 @@
 <script type="text/javascript" src="scripts/custom.js"></script>
 <script type="text/javascript">
       $(document).ready(function() {
-          $.getJSON( "../kr_data.json", function( kr_data ) {
+          $.getJSON( "kr_data.json", function( kr_data ) {
               $("#kr_inf").html(data["kr_inf"]);
               $("#kr_inf_diff").html(data["kr_inf_diff"]);
               $("#kr_inf_name").html(data["kr_inf_name"]);
