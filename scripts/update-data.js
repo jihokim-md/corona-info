@@ -19,7 +19,7 @@
             $("#kr_negative_diff").html(data["kr_negative_diff"]);
             $("#kr_negative_name").html(data["kr_negative_name"]);
             });
-        $.getJSON( "wo_data.json", function( kr_data ) {
+        $.getJSON( "../wo_data.json", function( kr_data ) {
             $("#wo_inf").html(data["wo_inf"]);
             $("#wo_inf_diff").html(data["wo_inf_diff"]);
             $("#wo_inf_name").html(data["wo_inf_name"]);
